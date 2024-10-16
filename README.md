@@ -10,15 +10,16 @@
 
 ### Структура проекта
 
-- `praktikum` - пакет, содержащий классы 'Bun', 'Burgers', 'Database', 'Ingridient';
+- `praktikum` - пакет, содержащий:
+            классы 'Bun', 'Burgers', 'Database', 'Ingridient';
+            `ingridient_types.py` - файл, содержащий перечесление типров ингридиентов;
+            `praktikum.py` - файл - точка входа в приложение;
 - `tests` - пакет, содержащий тесты, покрывающие классы:
             `test_bun.py` - тестирование класса Bun;
             `test_burger.py` - тестирование класса Burger;
             `test_database.py` - тестирование класса Database;
             `test_ingridient.py` - тестирование класса Ingridient;
 - `gitignore` - файл, содержащий локальные файлы;
-- `ingridient_types.py` - файл, содержащий перечесление типров ингридиентов;
-- `praktikum.py` - корневой файл - точка входа в приложение;
 - `README.md` - файл, содержащий текстовую часть о проделанной работе;
 - `requirements.txt` - файл, содержащий список внешних зависимостей.
 

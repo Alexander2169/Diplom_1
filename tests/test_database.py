@@ -2,7 +2,7 @@ import pytest
 from praktikum.database import Database
 from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
-from ingredient_types import *
+from praktikum.ingredient_types import *
 
 class TestDatabase: # Создаем экземпляр базы данных для тестов
     @pytest.fixture
