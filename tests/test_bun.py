@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from ..praktikum.bun import Bun
+from praktikum.bun import Bun
 
 class TestBun:
     @pytest.mark.parametrize("name, price", [     # Параметризацию для проверки различных значений имени и цены
