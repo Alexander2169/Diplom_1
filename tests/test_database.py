@@ -4,14 +4,12 @@ from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
 from ingredient_types import *
 
-class TestDatabase:
+class TestDatabase: # Создаем экземпляр базы данных для тестов
     @pytest.fixture
     def database(self):
-        """Создает экземпляр базы данных для тестов."""
         return Database()
 
-    def test_available_buns(self, database):
-        """Проверяет, что метод available_buns возвращает правильные булочки."""
+    def test_available_buns(self, database): # Проверяем, что метод available_buns возвращает правильные булочки
         buns = database.available_buns()
         assert len(buns) == 3
         assert buns[0].get_name() == "black bun"
@@ -21,8 +19,7 @@ class TestDatabase:
         assert buns[1].get_price() == 200
         assert buns[2].get_price() == 300
 
-    def test_available_ingredients(self, database):
-        """Проверяет, что метод available_ingredients возвращает правильные ингредиенты."""
+    def test_available_ingredients(self, database): # Проверяем, что метод available_ingredients возвращает правильные ингредиенты
         ingredients = database.available_ingredients()
         assert len(ingredients) == 6
         assert ingredients[0].get_name() == "hot sauce"
@@ -32,21 +29,19 @@ class TestDatabase:
         assert ingredients[4].get_name() == "dinosaur"
         assert ingredients[5].get_name() == "sausage"
 
-    def test_bun_initialization(self):
-        """Проверяет, что булочки инициализируются с правильными значениями."""
-        bun = Bun("test bun", 150)
-        assert bun.get_name() == "test bun"
-        assert bun.get_price() == 150
+    def test_bun_initialization(self): # Проверяем, что булочки инициализируются с правильными значениями
 
-    def test_ingredient_initialization(self):
-        """Проверяет, что ингредиенты инициализируются с правильными значениями."""
-        ingredient = Ingredient(INGREDIENT_TYPE_SAUCE, "test sauce", 50)
-        assert ingredient.get_name() == "test sauce"
-        assert ingredient.get_price() == 50
+        bun = Bun("white bun", 200)
+        assert bun.get_name() == "white bun"
+        assert bun.get_price() == 200
+
+    def test_ingredient_initialization(self): # Проверяем, что ингредиенты инициализируются с правильными значениями
+        ingredient = Ingredient(INGREDIENT_TYPE_SAUCE, "chili sauce", 300)
+        assert ingredient.get_name() == "chili sauce"
+        assert ingredient.get_price() == 300
         assert ingredient.get_type() == INGREDIENT_TYPE_SAUCE
 
-    def test_database_initialization(self):
-        """Проверяет, что база данных инициализируется с правильными булочками и ингредиентами."""
+    def test_database_initialization(self): # Проверяем, что база данных инициализируется с правильными булочками и ингредиентами
         database = Database()
         assert len(database.buns) == 3
         assert len(database.ingredients) == 6
