@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from praktikum.bun import Bun
+from ..praktikum.bun import Bun
 
 class TestBun:
     @pytest.mark.parametrize("name, price", [
@@ -23,11 +23,11 @@ class TestBun:
 
     def test_price_type(self):
         bun = Bun("Булочка", 30.0)
-        assert (bun.get_price(), float)
+        assert isinstance(bun.get_price(), float)
 
     def test_name_type(self):
         bun = Bun("Булочка", 30.0)
-        assert (bun.get_name(), str)
+        assert isinstance(bun.get_name(), str)
 
     def test_bun_with_mock(self):
         # Создаем мок для класса Bun
