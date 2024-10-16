@@ -1,5 +1,5 @@
 import pytest
-from unittest.mock import MagicMock
+from unittest.mock import Mock
 from praktikum.burger import Burger
 from praktikum.bun import Bun
 from praktikum.ingredient import Ingredient
@@ -7,14 +7,14 @@ from praktikum.ingredient import Ingredient
 class TestBurger:
     @pytest.fixture
     def bun_mock(self):
-        bun = MagicMock(spec=Bun)
+        bun = Mock(spec=Bun)
         bun.get_name.return_value = "Булочка"
         bun.get_price.return_value = 50.0
         return bun
 
     @pytest.fixture
     def ingredient_mock(self):
-        ingredient = MagicMock(spec=Ingredient)
+        ingredient = Mock(spec=Ingredient)
         ingredient.get_name.return_value = "помидор"
         ingredient.get_price.return_value = 10.0
         ingredient.get_type.return_value = "начинка"
