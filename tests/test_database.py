@@ -9,7 +9,7 @@ class TestDatabase: # Создаем экземпляр базы данных д
     def database(self):
         return Database()
 
-    def test_available_buns(self, database): # Проверяем, что метод available_buns возвращает правильные булочки
+    def test_available_buns(self, database): # Проверяем, что метод возвращает правильные булочки
         buns = database.available_buns()
         assert len(buns) == 3
         assert buns[0].get_name() == "black bun"
@@ -19,7 +19,7 @@ class TestDatabase: # Создаем экземпляр базы данных д
         assert buns[1].get_price() == 200
         assert buns[2].get_price() == 300
 
-    def test_available_ingredients(self, database): # Проверяем, что метод available_ingredients возвращает правильные ингредиенты
+    def test_available_ingredients(self, database): # Проверяем, что метод возвращает правильные ингредиенты
         ingredients = database.available_ingredients()
         assert len(ingredients) == 6
         assert ingredients[0].get_name() == "hot sauce"

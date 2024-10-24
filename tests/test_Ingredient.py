@@ -14,14 +14,14 @@ class TestIngredient:
         assert ingredient.get_name() == name
         assert ingredient.get_price() == price
 
-    def test_get_price(self): # Проверяем, что метод get_price возвращает правильную цену
+    def test_get_price(self): # Проверяем, что метод возвращает правильную цену
         ingredient = Ingredient("sauce", "hot sauce", 100.0)
         assert ingredient.get_price() == 100.0
 
-    def test_get_name(self): # Проверяем, что метод get_name возвращает правильное имя
+    def test_get_name(self): # Проверяем, что метод возвращает правильное имя
         ingredient = Ingredient("filling", "cutlet", 150.0)
         assert ingredient.get_name() == "cutlet"
 
-    def test_get_type(self): # Проверяем, что метод get_type возвращает правильный тип
+    def test_get_type(self): # Проверяем, что метод возвращает правильный тип
         ingredient = Ingredient("sauce", "hot sauce", 100.0)
         assert ingredient.get_type() == "sauce"

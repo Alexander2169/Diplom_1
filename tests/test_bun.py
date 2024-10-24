@@ -13,11 +13,11 @@ class TestBun:
         assert bun.get_name() == name
         assert bun.get_price() == price
 
-    def test_get_name(self): # Проверяем, что метод get_name возвращает правильное имя
+    def test_get_name(self): # Проверяем, что метод возвращает правильное имя
         bun = Bun("Булочка", 30.0)
         assert bun.get_name() == "Булочка"
 
-    def test_get_price(self): # Проверяем, что метод get_price возвращает правильную цену
+    def test_get_price(self): # Проверяем, что метод возвращает правильную цену
         bun = Bun("Булочка", 30.0)
         assert bun.get_price() == 30.0
 
